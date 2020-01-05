@@ -92,6 +92,9 @@ export default {
     };
   },
   methods: {
+     sanitize(s){
+      return s.replace(/ /g, '-');
+    },
     getfilteredData: function() {
       this.filteredData = data;
       let filteredDataByfilters = [];
