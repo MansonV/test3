@@ -1,5 +1,5 @@
     <template>
-      <item-card :item="item"></item-card>
+      <item :item="item"></item>
     </template>
 
     <script>
