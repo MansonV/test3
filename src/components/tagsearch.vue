@@ -24,7 +24,7 @@
   <div class="card-columns">
      <template v-for="(item, index) in filteredData" >
       <router-link :to="'/item/' + sanitize(item.name)" :key="index">
-        <item-card  :key="index" :item="item"></item-card>
+        <item  :key="index" :item="item"></item>
       </router-link>
      </template> 
    </div>
