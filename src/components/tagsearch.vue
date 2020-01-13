@@ -13,10 +13,19 @@
         </div>
       </form>
       <div id="checkboxes">
+        <h3> Genre</h3>
       <div v-for="(stack,index) in stacks" :key="index" class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox"  v-model="stack.checked" v-on:change="getfilteredData">
         <label class="form-check-label">
         {{ stack.value }}
+        </label>
+      </div>
+      <br>
+      <h3> Style</h3>
+      <div v-for="(tagz,index) in tagz" :key="index" class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox"  v-model="tagz.checked" v-on:change="getfilteredData">
+        <label class="form-check-label">
+        {{ tagz.value }}
         </label>
       </div>    
     </div>
@@ -32,10 +41,8 @@
 </template>
 
 <script>
-
 import item from './item';
 import data from '../data/data';
-
 export default {
   name: 'tagsearch',
   components: {
@@ -87,6 +94,40 @@ export default {
       {
         checked: false,
         value: '3rd person'
+      }
+      ],
+      tagz: [
+      {
+        checked: false,
+        value: 'geronimo'
+      },
+      {
+        checked: false,
+        value: 'chikita'
+      },
+      {
+        checked: false,
+        value: 'mes couilles'
+        },
+      {
+        checked: false,
+        value: 'racing'
+      },
+      {
+        checked: false,
+        value: 'moba'
+      },
+      {
+        checked: false,
+        value: 'plane'
+      },
+      {
+        checked: false,
+        value: 'world war 2'
+      },
+      {
+        checked: false,
+        value: 'futurist'
       }
       ]
     };
